@@ -24,7 +24,6 @@ function ProductForm(props) {
             
         };
 
-        console.log("prodData",productData);
         props.onSaveProduct(productData);
 
         setTitle('');

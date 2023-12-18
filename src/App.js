@@ -9,7 +9,7 @@ const App = () => {
   function printProductData(data) {
     console.log("i am inside APP.js")
     // products.push(data);
-    setProducts([data, ...products]);
+    setProducts([...products,data]);
     console.log(products);
   }
 
