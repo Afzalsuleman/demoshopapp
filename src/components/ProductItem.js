@@ -15,6 +15,7 @@ const ProductItem = (props) => {
     console.log("button clicked");
   }
   
+  console.log("props.date", props)
 
   return (
     <Card className='product-item'>

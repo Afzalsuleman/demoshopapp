@@ -11,7 +11,7 @@ function ProductForm(props) {
         //console.log(event.target.value);
     }
     function dateChangeHandler(event) {
-        setDate(event.target.value);
+        setDate(new Date(event.target.value));
     }
 
 
@@ -24,7 +24,7 @@ function ProductForm(props) {
             
         };
 
-        //console.log(productData);
+        console.log("prodData",productData);
         props.onSaveProduct(productData);
 
         setTitle('');
