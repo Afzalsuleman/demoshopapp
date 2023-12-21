@@ -8,7 +8,6 @@ const App = () => {
 
   function printProductData(data) {
     console.log("i am inside APP.js")
-    // products.push(data);
     setProducts([...products,data]);
     console.log(products);
   }
@@ -44,7 +43,7 @@ const App = () => {
   return (
     <div>
       <NewProduct pranay = {printProductData} />
-      <Products items={products} />
+      <Products items={products} setProducts={setProducts} />
     </div>
   );
 }

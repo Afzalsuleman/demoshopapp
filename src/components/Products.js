@@ -15,6 +15,8 @@ const Products = (props) => {
         title={item?.title}
         amount={item?.amount}
         date={item?.date}
+        products={props?.items}
+        setProducts={props?.setProducts}
       />
         )
       })

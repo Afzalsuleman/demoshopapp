@@ -6,13 +6,13 @@ import './ProductItem.css';
 
 const ProductItem = (props) => {
  // const title=props.title;
-   const [title, setTitle] =  useState(props.title);
+   //const [title, setTitle] =  useState(props.title);
 
 
-  function clickHandler() {
-    //title = "Popcorn";
-    setTitle("Popcorn");
-    console.log("button clicked");
+  function clickHandler(temp) {
+     const data = props?.products.filter((c) => c.title !== temp)
+    props.setProducts(data)
+    //console.log("button clicked", finalData);
   }
   
   console.log("props.date", props)
@@ -21,8 +21,8 @@ const ProductItem = (props) => {
     <Card className='product-item'>
       <ProductDate date={props.date} />
       <div className='product-item__description'>
-        <h2>{title}</h2>
-        <button onClick={clickHandler}>Add to cart</button>
+        <h2>{props.title}</h2>
+        <button onClick={() => clickHandler(props.title)}>Add to cart</button>
       </div>
     </Card>
   );
